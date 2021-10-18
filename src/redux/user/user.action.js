@@ -9,10 +9,9 @@ const GET_USER_INFO_FAILURE = "GET_USER_INFO_FAILURE";
 //Login Actions
 let getLoginAction = (user, history) => {
   console.log(user, "Helllo");
-  return (dispatch) => {
-    dispatch({ type: LOGIN_SUCCESS, payload: user });
-    dispatch(getUserInfo());
-    history.push("/admin");
+  return {
+    type: LOGIN_SUCCESS,
+    payload: user,
   };
 };
 
