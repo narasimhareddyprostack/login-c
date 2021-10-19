@@ -1,14 +1,22 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import LoginC from "./Components/LoginC";
 import Home from "./Components/Home";
-import AdminC from "./Components/AdminC";
-import LogoutC from "./Components/LogoutC";
+
+import Bloger from "./Components/Bloger";
 import Navbar from "./Components/Navbar";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 
 class App extends Component {
+  state = {
+    loggedIn: true,
+  };
   render() {
     return (
       <>
@@ -17,9 +25,10 @@ class App extends Component {
             <Navbar />
             <Switch>
               <Route exact path="/" component={Home} />
+
               <Route exact path="/login" component={LoginC} />
-              <Route path="/admin" component={AdminC} />
-              <Route path="/LogoutC" component={LogoutC} />
+
+              <Route path="/blog" component={Bloger} />
             </Switch>
           </Router>
         </Provider>

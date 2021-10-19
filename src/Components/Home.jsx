@@ -17,7 +17,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <pre>{JSON.stringify(this.state)}</pre>
+      {/*   <pre>{JSON.stringify(this.state)}</pre> */}
         {this.state.token_flag ? (
           <>
             <LoginC />

@@ -17,6 +17,7 @@ let LoginC = () => {
   };
   let submitForm = (e) => {
     dispatch(getLoginAction(user, history));
+
     e.preventDefault();
   };
   return (
@@ -57,7 +58,7 @@ let LoginC = () => {
         </div>
         {/* ----*Login*---- */}
         <div className="column">
-          <pre>{JSON.stringify(user)}</pre>
+          {/*   <pre>{JSON.stringify(user)}</pre> */}
         </div>
         {/* <div className="cover-img">
           <img src={"bg.png"} alt="newimage" />

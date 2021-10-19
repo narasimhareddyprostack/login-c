@@ -9,6 +9,7 @@ const GET_USER_INFO_FAILURE = "GET_USER_INFO_FAILURE";
 //Login Actions
 let getLoginAction = (user, history) => {
   console.log(user, "Helllo");
+  history.push("/blog");
   return {
     type: LOGIN_SUCCESS,
     payload: user,
